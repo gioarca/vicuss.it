@@ -1,9 +1,6 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 function Footer() {
-  const { t } = useTranslation();
-
   return (
     <footer className="mt-auto bg-white border-t border-gray-200 py-8 px-4">
       <div className="max-w-6xl mx-auto flex flex-col items-center space-y-6">
