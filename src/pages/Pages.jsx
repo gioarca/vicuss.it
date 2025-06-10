@@ -1,4 +1,4 @@
-import { useRef }, useEffect from "react";
+import { useRef, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { AuthContextProvider } from "../context/AuthContext";
