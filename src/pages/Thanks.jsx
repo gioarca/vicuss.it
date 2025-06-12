@@ -1,15 +1,57 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import confetti from "canvas-confetti";
 
 function Thanks() {
   useEffect(() => {
-    // Mini esplosione di confetti
+    // 🎉 1. Esplosione di confetti all'arrivo sulla pagina
     confetti({
       particleCount: 80,
       spread: 70,
       origin: { y: 0.6 },
     });
+
+    // 📊 2. Tracciamento con Google Analytics 4 (GA4)
+    if (typeof gtag !== "undefined") {
+      gtag("event", "generate_lead", {
+        event_category: "engagement",
+        event_label: "contact_form_success",
+        value: 1,
+        currency: "EUR",
+      });
+      console.log("✅ Evento GA4 'generate_lead' inviato");
+    }
+
+    // 📘 3. Tracciamento con Meta Pixel (Facebook)
+    const waitForFbqAndTrack = () => {
+      if (typeof fbq === "function") {
+        fbq("track", "Lead", {
+          content_name: "Contact Form Submission",
+          content_category: "Lead Generation",
+          value: 10.0,
+          currency: "EUR",
+        });
+        console.log("🔥 Evento Meta Pixel 'Lead' tracciato");
+      } else {
+        setTimeout(waitForFbqAndTrack, 500); // Aspetta che fbq sia disponibile
+      }
+    };
+    waitForFbqAndTrack();
+
+    // 🟢 4. Tracciamento tramite Google Tag Manager (dataLayer)
+    if (typeof window !== "undefined" && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: "lead_generated",
+        event_category: "engagement",
+        event_action: "form_submission",
+        event_label: "contact_form",
+        value: 1,
+      });
+      console.log("🟢 Evento GTM 'lead_generated' pushato nel dataLayer");
+    }
+
+    // 🐞 5. Log finale per debug
+    console.log("✅ Tutti i tentativi di tracking lead sono stati eseguiti");
   }, []);
 
   return (
@@ -44,7 +86,6 @@ function Thanks() {
         </div>
 
         {/* Link di ritorno */}
-
         <p className="text-sm text-gray-500">
           Torna alla home cliccando{" "}
           <Link to="/" className="text-red-500 font-medium hover:underline">

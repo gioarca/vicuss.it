@@ -13,14 +13,6 @@ function Pages() {
   const contactRef = useRef(null);
   const location = useLocation();
 
-  useEffect(() => {
-    // Verifica che fbq esista
-    if (window.fbq) {
-      window.fbq("track", "PageView");
-      console.log("Meta Pixel PageView fired on", location.pathname);
-    }
-  }, [location]);
-
   return (
     <AuthContextProvider>
       <>
