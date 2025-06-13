@@ -11,19 +11,8 @@ function Thanks() {
       origin: { y: 0.6 },
     });
 
-    // 📊 2. Tracciamento con Google Analytics 4 (GA4)
-    if (typeof gtag !== "undefined") {
-      gtag("event", "generate_lead", {
-        event_category: "engagement",
-        event_label: "contact_form_success",
-        value: 1,
-        currency: "EUR",
-      });
-      console.log("✅ Evento GA4 'generate_lead' inviato");
-    }
-
-    // 📘 3. Tracciamento con Meta Pixel (Facebook)
-    const waitForFbqAndTrack = () => {
+    // 📘 2. Tracciamento Meta Pixel "Lead"
+    const trackMetaPixel = () => {
       if (typeof fbq === "function") {
         fbq("track", "Lead", {
           content_name: "Contact Form Submission",
@@ -33,24 +22,16 @@ function Thanks() {
         });
         console.log("🔥 Evento Meta Pixel 'Lead' tracciato");
       } else {
-        setTimeout(waitForFbqAndTrack, 500); // Aspetta che fbq sia disponibile
+        console.warn("⚠️ fbq non disponibile. Riprovo tra 500ms...");
+        setTimeout(trackMetaPixel, 500);
       }
     };
-    waitForFbqAndTrack();
 
-    // 🟢 4. Tracciamento tramite Google Tag Manager (dataLayer)
-    if (typeof window !== "undefined" && Array.isArray(window.dataLayer)) {
-      window.dataLayer.push({
-        event: "lead_generated",
-        event_category: "engagement",
-        event_action: "form_submission",
-        event_label: "contact_form",
-        value: 1,
-      });
-      console.log("🟢 Evento GTM 'lead_generated' pushato nel dataLayer");
-    }
+    trackMetaPixel();
 
-    // 🐞 5. Log finale per debug
+    // 🟢 3. Tracciamento tramite Google Tag Manager (dataLayer)
+
+    // 🐞 4. Log finale per debug
     console.log("✅ Tutti i tentativi di tracking lead sono stati eseguiti");
   }, []);
 

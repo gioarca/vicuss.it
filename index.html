@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="it">
 <head>
-
-  <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,15 +16,36 @@
       </script>
     <!-- End Meta Pixel Code -->
 
-    <meta charSet="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/src/App.css" rel="stylesheet">
 
-    
+
     <!-- Iubenda -->
     <script type="text/javascript">
     var _iub = _iub || [];
-    _iub.csConfiguration = {"siteId":4045593,"cookiePolicyId":19298973,"lang":"it","storage":{"useSiteId":true}};
+    _iub.csConfiguration = {
+    "siteId": 4045593,
+    "cookiePolicyId": 19298973,
+    "lang": "it",
+    "storage": {"useSiteId": true},
+    "callback": {
+        "onConsentGiven": function() {
+            // Quando l'utente accetta, inizializza il pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('consent', 'grant');
+                fbq('init', '1068046574672461');
+                fbq('track', 'PageView');
+            }
+        },
+        "onConsentRejected": function() {
+            // Quando l'utente rifiuta
+            if (typeof fbq !== 'undefined') {
+                fbq('consent', 'revoke');
+            }
+        }
+    }
+};
     </script>
     <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4045593.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
@@ -36,7 +56,7 @@
     <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/safe-tcf-v2.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charSet="UTF-8" async></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
