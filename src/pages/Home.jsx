@@ -361,10 +361,12 @@ function Home() {
                       <strong>1. Scegli</strong> la tua data di partenza
                     </div>
                     <div>
-                      <strong>2. Prenota</strong> il tuo volo/treno
+                      <strong>2. Prenota</strong> la tua workation nel borgo che
+                      preferisci
                     </div>
                     <div>
-                      <strong>3. Porta</strong> solo il laptop
+                      <strong>3. Paga</strong> la tua prenotazione in modo
+                      sicuro
                     </div>
                   </div>
                 </div>
@@ -379,7 +381,7 @@ function Home() {
                   <p className="text-red-800 font-semibold flex items-center">
                     🔥{" "}
                     <span className="ml-2">
-                      ATTENZIONE: Solo 10 posti per gruppo
+                      ATTENZIONE: Massimo 10 posti per gruppo
                     </span>
                   </p>
                 </div>
