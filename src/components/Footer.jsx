@@ -7,11 +7,11 @@ function Footer() {
         {/* Logo Vicus */}
         <a href="/" className="flex items-center space-x-2">
           <img
-            src="/favicon-96x96.png" // Sostiture con il path corretto del tuo logo
+            src="/log-vicus.png" // Sostiture con il path corretto del tuo logo
             alt="Vicus Logo"
             className="h-10 w-auto object-contain"
           />
-          <span className="text-xl font-semibold text-gray-800">Vicus</span>
+          {/* <span className="text-xl font-semibold text-gray-800">Vicus</span> */}
         </a>
         {/* Social */}
         <div className="text-center">
@@ -82,7 +82,7 @@ function Footer() {
 
         {/* Copyright */}
         <div className="text-center text-xs text-gray-500">
-          <p>© 2025 | Tutti i diritti riservati</p>
+          <p>© 2026 | Tutti i diritti riservati</p>
         </div>
       </div>
     </footer>
