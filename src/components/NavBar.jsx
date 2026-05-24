@@ -33,13 +33,13 @@ function NavBar({ contactRef }) {
           <div className="flex items-center">
             <a href="/" className="flex items-center space-x-3 group">
               <img
-                src="/favicon-96x96.png"
+                src="/logo-vicus.png"
                 alt="Logo"
                 className="h-8 w-auto group-hover:scale-110 transition-transform duration-200"
               />
-              <span className="text-xl font-semibold tracking-tight text-gray-800 group-hover:text-red-600 transition-colors duration-200">
+              {/* <span className="text-xl font-semibold tracking-tight text-gray-800 group-hover:text-red-600 transition-colors duration-200">
                 Vicus
-              </span>
+              </span> */}
             </a>
           </div>
 

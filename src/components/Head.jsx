@@ -8,11 +8,11 @@ function Head() {
       <link
         rel="icon"
         type="image/png"
-        href="/favicon-96x96.png"
+        href="/pittogramma-vicus-1.png"
         sizes="96x96"
       />
       <link rel="stylesheet" href="App.css" />
-      <title className="font-bold">Vicuss</title>
+      <title className="font-bold">Vicus</title>
     </>
   );
 }
