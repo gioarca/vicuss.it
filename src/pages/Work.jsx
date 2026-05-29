@@ -34,8 +34,8 @@ function Work() {
             "Pe fa e cose bone, ci vo' 'a pazienza e 'o tiempo." cit. Nonna
           </blockquote>
 
-          <p className="text-lg text-gray-600 italic">
-            Un omaggio alle tradizioni che ci hanno formato
+          <p className="text-lg text-gray-600">
+            Un omaggio alle nostre nonne che ci hanno cresciuto
           </p>
         </div>
 
@@ -52,12 +52,11 @@ function Work() {
 
           <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
             <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              Vuoi essere il primo a scoprire i nostri lavori?
+              Vuoi essere il primo a scoprire le nostre esperienze?
             </h3>
             <p className="text-gray-600 mb-4">
-              Lascia il tuo contatto e ti avviseremo appena la galleria sarà
-              pronta. Riceverai anche offerte esclusive sui nostri servizi di
-              incisione.
+              Lascia il tuo contatto e ti avviseremo appena l'artefatto sarà
+              pronto.
             </p>
             <a
               href="/#contact"
@@ -71,7 +70,7 @@ function Work() {
           <div className="text-sm text-gray-500 space-y-1 mb-5">
             <p>🎯 Preview esclusiva</p>
             <p>💎 Sconti riservati ai primi clienti</p>
-            <p>🔔 Notifiche per servizi personalizzati</p>
+            <p>🔔 Notifiche solo su eventi importanti</p>
           </div>
         </div>
       </div>
