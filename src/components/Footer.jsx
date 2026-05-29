@@ -55,6 +55,18 @@ function Footer() {
                 className="w-10 h-10 rounded-full object-cover"
               />
             </a>
+            <a
+              href="https://www.tiktok.com/@vicus_ita/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform duration-300 hover:scale-110 hover:opacity-70"
+            >
+              <img
+                src="https://img.magnific.com/premium-vector/art-illustration_1166422-332.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="Facebook"
+                className="w-10 h-10 rounded-full object-cover"
+              />
+            </a>
           </div>
         </div>
 

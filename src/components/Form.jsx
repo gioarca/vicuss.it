@@ -283,15 +283,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-/*
-  Font setup — aggiungi al tuo index.html:
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  Utilizzo:
-    Standalone (pagina dedicata):   <Form />
-    Embedded in una section:        <Form embedded />
-*/
-
 // ─── Line Input ───────────────────────────────────────────────────────────────
 function LineInput({
   id,
@@ -599,96 +590,50 @@ export default function Form({ embedded = false }) {
     sendEmail,
   };
 
-  const fontStyle = { fontFamily: "'Figtree', sans-serif" };
-
-  const fontImport = `
-    @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus {
-      -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
-      transition: background-color 5000s;
-    }
-  `;
-
   // ── Versione embedded: solo la card ───────────────────────────────────────
   if (embedded) {
     return (
-      <>
-        <style>{fontImport}</style>
-        <div className="max-w-[560px] mx-auto" style={fontStyle}>
-          {/* Card con accent bar rossa in cima */}
-          <div className="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
-            <div className="h-1 bg-red-600" />
-            <div className="p-8 md:p-10">
-              <FormContent {...sharedProps} />
-            </div>
+      <div className="max-w-[560px] mx-auto">
+        <div className="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
+          <div className="h-1 bg-red-600" />
+          <div className="p-8 md:p-10">
+            <FormContent {...sharedProps} />
           </div>
-          <p className="text-center text-sm text-stone-400 mt-5">
-            Preferisci la mail?{" "}
-            <a
-              href="mailto:borghisud@gmail.com"
-              className="text-stone-600 font-semibold hover:text-red-600 transition-colors"
-            >
-              borghisud@gmail.com
-            </a>
-          </p>
         </div>
-      </>
+        <p className="text-center text-sm text-stone-400 mt-5">
+          Preferisci la mail?{" "}
+          <a
+            href="mailto:borghisud@gmail.com"
+            className="text-stone-600 font-semibold hover:text-red-600 transition-colors"
+          >
+            borghisud@gmail.com
+          </a>
+        </p>
+      </div>
     );
   }
 
-  // ── Versione standalone: pagina intera con header ─────────────────────────
+  // ── Versione standalone: pagina intera ────────────────────────────────────
   return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
-        body, * { font-family: 'Figtree', sans-serif !important; }
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover,
-        input:-webkit-autofill:focus {
-          -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
-          transition: background-color 5000s;
-        }
-      `}</style>
-
-      <div
-        className="min-h-screen bg-stone-100 flex items-center justify-center px-4 py-16"
-        style={fontStyle}
-      >
-        <div className="w-full max-w-[560px]">
-          {/* Header standalone */}
-          <div className="mb-8 text-center">
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.18em] text-red-600 mb-3">
-              Borghi Sud
-            </span>
-            <h1 className="text-[38px] font-extrabold text-stone-900 leading-tight mb-2">
-              Voglio venire al Sud.
-            </h1>
-            <p className="text-stone-500 text-base leading-relaxed">
-              Lascia i tuoi contatti, ti ricontatteremo entro 24 ore.
-            </p>
+    <div className="min-h-screen flex items-center justify-center px-4 py-16">
+      <div className="w-full max-w-[560px]">
+        <div className="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
+          <div className="h-1 bg-red-600" />
+          <div className="p-8 md:p-10">
+            <FormContent {...sharedProps} />
           </div>
-
-          {/* Card con accent bar rossa in cima */}
-          <div className="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
-            <div className="h-1 bg-red-600" />
-            <div className="p-8 md:p-10">
-              <FormContent {...sharedProps} />
-            </div>
-          </div>
-
-          <p className="text-center text-sm text-stone-400 mt-5">
-            Preferisci la mail?{" "}
-            <a
-              href="mailto:borghisud@gmail.com"
-              className="text-stone-600 font-semibold hover:text-red-600 transition-colors"
-            >
-              borghisud@gmail.com
-            </a>
-          </p>
         </div>
+
+        <p className="text-center text-sm text-stone-400 mt-5">
+          Preferisci la mail?{" "}
+          <a
+            href="mailto:borghisud@gmail.com"
+            className="text-stone-600 font-semibold hover:text-red-600 transition-colors"
+          >
+            borghisud@gmail.com
+          </a>
+        </p>
       </div>
-    </>
+    </div>
   );
 }

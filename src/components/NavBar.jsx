@@ -25,7 +25,7 @@ function NavBar({ contactRef }) {
   };
 
   return (
-    <nav className="w-full mb-24">
+    <nav className="w-full">
       {/* Navbar per utenti non autenticati */}
       <div className="fixed top-0 w-full bg-white bg-opacity-95 backdrop-blur-sm shadow-md z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
