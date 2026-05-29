@@ -25,7 +25,7 @@ function Work() {
           <img
             src="https://images.unsplash.com/photo-1454875392665-2ac2c85e8d3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bm9ubmF8ZW58MHx8MHx8fDI%3D"
             alt="Nonna che aspetta con pazienza"
-            className="mx-auto h-48 w-auto rounded-lg shadow-lg mb-6 md:h-64"
+            className="mx-auto h-80 w-auto rounded-lg shadow-lg mb-6 md:h-72"
           />
         </div>
 
