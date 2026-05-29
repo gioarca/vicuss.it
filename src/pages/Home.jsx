@@ -67,7 +67,7 @@ function Home() {
       }}
     >
       {/* Hero Section - Layout side by side */}
-      <div className="px-4 py-12 md:py-20 max-w-6xl mx-auto">
+      <div className="px-4 py-36 md:py-20 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Sezione Copy - Sinistra */}
           <div className="text-left">

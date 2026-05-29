@@ -38,7 +38,7 @@ function Goals() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 py-36 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -90,8 +90,8 @@ function Goals() {
                           {goal.id === 1
                             ? "Lavoro Dignitoso"
                             : goal.id === 2
-                            ? "Innovazione"
-                            : "Riduzione Disuguaglianze"}
+                              ? "Innovazione"
+                              : "Riduzione Disuguaglianze"}
                         </h3>
                       </div>
                     </div>
