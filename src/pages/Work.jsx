@@ -19,7 +19,7 @@ function Work() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <div className="min-h-screen flex flex-col justify-center items-center text-center px-4 py-12">
       <div className="max-w-2xl mx-auto">
         <div className="mb-8">
           <img
