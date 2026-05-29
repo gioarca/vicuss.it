@@ -19,13 +19,13 @@ function Work() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-center px-4 py-12">
+    <div className="min-h-screen flex flex-col justify-center items-center text-center px-4 py-36">
       <div className="max-w-2xl mx-auto">
         <div className="mb-8">
           <img
             src="https://images.unsplash.com/photo-1454875392665-2ac2c85e8d3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bm9ubmF8ZW58MHx8MHx8fDI%3D"
             alt="Nonna che aspetta con pazienza"
-            className="mx-auto h-80 w-auto rounded-lg shadow-lg mb-6 md:h-72"
+            className="mx-auto h-96 w-auto rounded-lg shadow-lg mb-6 md:h-72"
           />
         </div>
 
